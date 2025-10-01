@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromagnetism și Aplicațiile Sale Moderne</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🧲 Electromagnetism Modern</h1>
+            <ul>
+                <li><a href="#principii">Principii</a></li>
+                <li><a href="#spectru">Spectru EM</a></li>
+                <li><a href="#aplicatii">Aplicații</a></li>
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Electromagnetismul în Era Digitală</h1>
+                <p>Explorează principiile fundamentale și aplicațiile moderne ale electromagnetismului</p>
+                <div class="wave-animation">
+                    <div class="wave electric"></div>
+                    <div class="wave magnetic"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principiile Fundamentale -->
+        <section id="principii" class="section">
+            <div class="container">
+                <h2>🔬 Principiile Fundamentale</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Ecuațiile lui Maxwell</h3>
+                        <div class="equation-box">
+                            <div class="equation">∇ · E = ρ/ε₀</div>
+                            <p>Legea lui Gauss pentru câmpul electric</p>
+                        </div>
+                        <div class="equation-box">
+                            <div class="equation">∇ · B = 0</div>
+                            <p>Legea lui Gauss pentru câmpul magnetic</p>
+                        </div>
+                        <div class="equation-box">
+                            <div class="equation">∇ × E = -∂B/∂t</div>
+                            <p>Legea inducției electromagnetice (Faraday)</p>
+                        </div>
+                        <div class="equation-box">
+                            <div class="equation">∇ × B = μ₀J + μ₀ε₀∂E/∂t</div>
+                            <p>Legea lui Ampère (extinsă de Maxwell)</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Propagarea Undelor</h3>
+                        <div class="wave-demo">
+                            <div class="propagating-wave"></div>
+                            <p><strong>Viteza luminii:</strong> c = 299,792,458 m/s</p>
+                            <p><strong>Relația:</strong> c = 1/√(μ₀ε₀)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spectrul Electromagnetic -->
+        <section id="spectru" class="section spectru-section">
+            <div class="container">
+                <h2>🌈 Spectrul Electromagnetic</h2>
+                <div class="spectrum-container">
+                    <div class="spectrum-bar">
+                        <div class="spectrum-segment radio" data-name="Radio" data-freq="3 kHz - 300 MHz" data-lambda="100 km - 1 m"></div>
+                        <div class="spectrum-segment microwave" data-name="Microunde" data-freq="300 MHz - 300 GHz" data-lambda="1 m - 1 mm"></div>
+                        <div class="spectrum-segment infrared" data-name="Infraroșu" data-freq="300 GHz - 400 THz" data-lambda="1 mm - 750 nm"></div>
+                        <div class="spectrum-segment visible" data-name="Vizibil" data-freq="400 - 800 THz" data-lambda="750 - 380 nm"></div>
+                        <div class="spectrum-segment ultraviolet" data-name="Ultraviolet" data-freq="800 THz - 30 PHz" data-lambda="380 - 10 nm"></div>
+                        <div class="spectrum-segment xray" data-name="Raze X" data-freq="30 PHz - 30 EHz" data-lambda="10 nm - 10 pm"></div>
+                        <div class="spectrum-segment gamma" data-name="Raze γ" data-freq="> 30 EHz" data-lambda="< 10 pm"></div>
+                    </div>
+                    <div class="spectrum-info">
+                        <h3>Selectează o zonă din spectru</h3>
+                        <div class="info-content">
+                            <p>Fiecare zonă a spectrului electromagnetic are caracteristici și aplicații specifice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aplicații Moderne -->
+        <section id="aplicatii" class="section">
+            <div class="container">
+                <h2>🚀 Aplicații Moderne</h2>
+                <div class="applications-grid">
+                    <div class="app-category">
+                        <h3>📡 Comunicații</h3>
+                        <div class="app-items">
+                            <div class="app-item">
+                                <span class="icon">📻</span>
+                                <div>
+                                    <strong>Radio & TV</strong>
+                                    <p>Frecvențe radio (88-108 MHz FM)</p>
+                                </div>
+                            </div>
+                            <div class="app-item">
+                                <span class="icon">📱</span>
+                                <div>
+                                    <strong>Telefonie Mobilă</strong>
+                                    <p>4G/5G (700 MHz - 3.8 GHz)</p>
+                                </div>
+                            </div>
+                            <div class="app-item">
+                                <span class="icon">🛜</span>
+                                <div>
+                                    <strong>WiFi & Bluetooth</strong>
+                                    <p>2.4 GHz și 5 GHz</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="app-category">
+                        <h3>🏥 Medicină</h3>
+                        <div class="app-items">
+                            <div class="app-item">
+                                <span class="icon">🧠</span>
+                                <div>
+                                    <strong>RMN</strong>
+                                    <p>Câmpuri magnetice puternice (1.5-3 Tesla)</p>
+                                </div>
+                            </div>
+                            <div class="app-item">
+                                <span class="icon">🦴</span>
+                                <div>
+                                    <strong>Raze X</strong>
+                                    <p>Imagistică medicală (10-120 keV)</p>
+                                </div>
+                            </div>
+                            <div class="app-item">
+                                <span class="icon">⚡</span>
+                                <div>
+                                    <strong>Radioterapie</strong>
+                                    <p>Tratament cancer cu radiații</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="app-category">
+                        <h3>💻 Tehnologie</h3>
+                        <div class="app-items">
+                            <div class="app-item">
+                                <span class="icon">🔥</span>
+                                <div>
+                                    <strong>Microunde</strong>
+                                    <p>Încălzire prin agitarea moleculelor de apă</p>
+                                </div>
+                            </div>
+                            <div class="app-item">
+                                <span class="icon">🛰️</span>
+                                <div>
+                                    <strong>Radar</strong>
+                                    <p>Detectare și navigație (1-40 GHz)</p>
+                                </div>
+                            </div>
+                            <div class="app-item">
+                                <span class="icon">🌐</span>
+                                <div>
+                                    <strong>Fibra Optică</strong>
+                                    <p>Comunicații prin lumină infraroșie</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="app-category">
+                        <h3>⚡ Energie</h3>
+                        <div class="app-items">
+                            <div class="app-item">
+                                <span class="icon">🔄</span>
+                                <div>
+                                    <strong>Generatoare</strong>
+                                    <p>Conversie mecanică → electrică</p>
+                                </div>
+                            </div>
+                            <div class="app-item">
+                                <span class="icon">🔋</span>
+                                <div>
+                                    <strong>Încărcare Wireless</strong>
+                                    <p>Transfer de energie prin inducție</p>
+                                </div>
+                            </div>
+                            <div class="app-item">
+                                <span class="icon">⚙️</span>
+                                <div>
+                                    <strong>Transformatoare</strong>
+                                    <p>Modificarea tensiunii electrice</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Interactive -->
+        <section id="calculator" class="section calculator-section">
+            <div class="container">
+                <h2>🧮 Calculator Electromagnetic</h2>
+                <div class="calculator-container">
+                    <div class="calc-input">
+                        <h3>Calculează frecvența și lungimea de undă</h3>
+                        <div class="input-group">
+                            <label for="frequency">Frecvența (Hz):</label>
+                            <input type="number" id="frequency" placeholder="Ex: 100000000">
+                        </div>
+                        <div class="input-group">
+                            <label for="wavelength">Lungimea de undă (m):</label>
+                            <input type="number" id="wavelength" placeholder="Ex: 3">
+                        </div>
+                        <button id="calculate">Calculează</button>
+                    </div>
+                    <div class="calc-result">
+                        <h4>Rezultate:</h4>
+                        <div id="result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Interactive -->
+        <section id="quiz" class="section quiz-section">
+            <div class="container">
+                <h2>🧠 Quiz Electromagnetic</h2>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h3 id="question-text">Care este viteza luminii în vid?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="0">299,792,458 m/s</button>
+                            <button class="quiz-option" data-answer="1">300,000,000 m/s</button>
+                            <button class="quiz-option" data-answer="2">299,000,000 m/s</button>
+                            <button class="quiz-option" data-answer="3">298,792,458 m/s</button>
+                        </div>
+                    </div>
+                    <div class="quiz-result">
+                        <p id="quiz-feedback"></p>
+                        <button id="next-question">Următoarea întrebare</button>
+                    </div>
+                    <div class="quiz-score">
+                        <p>Scor: <span id="score">0</span>/<span id="total-questions">5</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Prezentare Electromagnetism | Educație Științifică Modernă</p>
+            <p>Principiile lui Maxwell continuă să guverneze tehnologiile secolului XXI</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
