@@ -1,0 +1,643 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav h1 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #667eea;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+/* Wave Animation */
+.wave-animation {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: 2rem 0;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.wave.electric {
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    top: 30px;
+    animation: waveMotion 2s ease-in-out infinite;
+}
+
+.wave.magnetic {
+    background: linear-gradient(90deg, #45b7d1, #96ceb4);
+    top: 60px;
+    animation: waveMotion 2s ease-in-out infinite reverse;
+}
+
+@keyframes waveMotion {
+    0%, 100% {
+        transform: translateX(-10px) scaleY(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(10px) scaleY(1.5);
+        opacity: 1;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+    background: white;
+    margin: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+/* Grid Layouts */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Maxwell Equations */
+.equation-box {
+    background: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.equation-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.equation {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.equation-box p {
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Wave Demo */
+.wave-demo {
+    text-align: center;
+    padding: 2rem;
+}
+
+.propagating-wave {
+    height: 60px;
+    background: linear-gradient(90deg, transparent, #667eea, transparent);
+    margin: 2rem 0;
+    border-radius: 30px;
+    animation: propagate 3s ease-in-out infinite;
+}
+
+@keyframes propagate {
+    0%, 100% {
+        transform: translateX(-100px);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateX(100px);
+        opacity: 1;
+    }
+}
+
+/* Spectrum Section */
+.spectru-section {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+.spectru-section h2 {
+    color: white;
+}
+
+.spectrum-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.spectrum-bar {
+    display: flex;
+    height: 80px;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.spectrum-segment {
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.spectrum-segment:hover {
+    transform: scaleY(1.2);
+    z-index: 2;
+}
+
+.spectrum-segment.radio { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
+.spectrum-segment.microwave { background: linear-gradient(45deg, #ffecd2, #fcb69f); }
+.spectrum-segment.infrared { background: linear-gradient(45deg, #ff8a80, #ff5722); }
+.spectrum-segment.visible { background: linear-gradient(45deg, #667eea, #764ba2); }
+.spectrum-segment.ultraviolet { background: linear-gradient(45deg, #8360c3, #2ebf91); }
+.spectrum-segment.xray { background: linear-gradient(45deg, #2196f3, #21cbf3); }
+.spectrum-segment.gamma { background: linear-gradient(45deg, #9c27b0, #e91e63); }
+
+.spectrum-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    min-height: 150px;
+}
+
+.spectrum-info h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Applications Grid */
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.app-category {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.app-category h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.app-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.app-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.app-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-item .icon {
+    font-size: 2rem;
+    min-width: 50px;
+    text-align: center;
+}
+
+.app-item strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.app-item p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Calculator Section */
+.calculator-section {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+}
+
+.calculator-section h2 {
+    color: white;
+}
+
+.calculator-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.calc-input h3 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+}
+
+#calculate {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+#calculate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.calc-result {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    min-height: 100px;
+}
+
+.calc-result h4 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#result {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Quiz Section */
+.quiz-section {
+    background: linear-gradient(135deg, #fc466b, #3f5efb);
+    color: white;
+}
+
+.quiz-section h2 {
+    color: white;
+}
+
+.quiz-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.quiz-question h3 {
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.quiz-option {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.quiz-option:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.quiz-option.correct {
+    background: #4caf50;
+    border-color: #2e7d32;
+}
+
+.quiz-option.incorrect {
+    background: #f44336;
+    border-color: #d32f2f;
+}
+
+.quiz-result {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#next-question {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+#next-question:hover {
+    transform: scale(1.05);
+}
+
+.quiz-score {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .spectrum-bar {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .spectrum-segment {
+        height: 50px;
+        border-radius: 0;
+    }
+    
+    .applications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section {
+        padding: 3rem 0;
+        margin: 1rem 0;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .equation {
+        font-size: 1.1rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .hero, .wave-animation, .quiz-section, footer {
+        display: none;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .card, .app-item {
+        border: 2px solid #000;
+    }
+    
+    .quiz-option {
+        border: 2px solid #fff;
+    }
+}
